@@ -1,11 +1,9 @@
-import BehavioralPatterns.Strategy.ChatClient;
-import BehavioralPatterns.Strategy.ConcImplementations.aesEncryption;
+import BehavioralPatterns.Template.CustomWindow;
 
 class Main {
     public static void main(String[] args) {
-    
-        var client = new ChatClient(new aesEncryption());
-        client.send("message");
+        var operation = new CustomWindow();
+        operation.close();;
     }
 
 }
