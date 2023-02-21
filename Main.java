@@ -1,9 +1,12 @@
-import BehavioralPatterns.Template.CustomWindow;
+import CreativePatterns.Singleton.Logger;
 
 class Main {
     public static void main(String[] args) {
-        var operation = new CustomWindow();
-        operation.close();;
-    }
+        var logger1 = Logger.getInstance("file1");
+        var logger2 = Logger.getInstance("file1");
+        System.out.println(logger1 == logger2);
 
+        var logger3 = Logger.getInstance("file2");
+        System.out.println(logger1 == logger3);
+    }
 }
